@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+
+
+
+<!--  strut has componants
+
+      	ActionServlet:this should be registerd to web.xml
+      	
+      	
+      	
+     ->below componants should be registered/add/entry
+     with-in struts-config.xml
+     
+      	ActionForm
+      	Action
+
+-->
+
+
+<struts-config>
+
+
+  <form-beans>
+<form-bean name="lform" type="LoginForm"/>
+
+</form-beans>
+
+    
+    
+    <action-mappings>
+    
+    
+    <action path="/hello" type="LoginAction" name="lform">
+		
+		<forward name="success" path="/s.jsp" />
+
+		<forward name="failure" path="/f.jsp" />
+
+	</action>
+
+
+
+
+    </action-mappings>
+ 
+
+
+</struts-config>
+
